@@ -1,0 +1,965 @@
+{
+  "version": "1.21.0",
+  "artifacts": {
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    },
+    "StaticSiteStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://725714232753/eu-west-1",
+      "properties": {
+        "templateFile": "StaticSiteStack.template.json"
+      },
+      "metadata": {
+        "/StaticSiteStack": [
+          {
+            "type": "aws:cdk:asset",
+            "data": {
+              "path": "asset.19e461d2ff1a5b90438fed6ceee4c197d7efee8712a6f76d85b501ab20bfb1a2",
+              "id": "19e461d2ff1a5b90438fed6ceee4c197d7efee8712a6f76d85b501ab20bfb1a2",
+              "packaging": "zip",
+              "sourceHash": "19e461d2ff1a5b90438fed6ceee4c197d7efee8712a6f76d85b501ab20bfb1a2",
+              "s3BucketParameter": "AssetParameters19e461d2ff1a5b90438fed6ceee4c197d7efee8712a6f76d85b501ab20bfb1a2S3BucketFCCD3A76",
+              "s3KeyParameter": "AssetParameters19e461d2ff1a5b90438fed6ceee4c197d7efee8712a6f76d85b501ab20bfb1a2S3VersionKey07AF06B6",
+              "artifactHashParameter": "AssetParameters19e461d2ff1a5b90438fed6ceee4c197d7efee8712a6f76d85b501ab20bfb1a2ArtifactHash652C125C"
+            },
+            "trace": [
+              "ConstructNode.addMetadata (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/core/lib/construct-compat.ts:384:92)",
+              "StaticSiteStack.addFileAsset (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/core/lib/stack.ts:553:17)",
+              "new Asset (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:113:28)",
+              "AssetCode.bind (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/aws-lambda/lib/code.ts:179:20)",
+              "new Function (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/aws-lambda/lib/function.ts:488:29)",
+              "new DnsValidatedCertificate (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/aws-certificatemanager/lib/dns-validated-certificate.ts:75:31)",
+              "new StaticSiteStack (/Users/simon/Code/ClearCoding/cc-blog/pipeline/lib/static-site-stack.ts:32:28)",
+              "Object.<anonymous> (/Users/simon/Code/ClearCoding/cc-blog/pipeline/bin/pipeline.ts:28:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1158:30)",
+              "Module.m._compile (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/ts-node/src/index.ts:836:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1178:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/ts-node/src/index.ts:839:12)",
+              "Module.load (internal/modules/cjs/loader.js:1002:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:901:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/ts-node/src/bin.ts:226:14)",
+              "Object.<anonymous> (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/ts-node/src/bin.ts:485:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1158:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1178:10)",
+              "Module.load (internal/modules/cjs/loader.js:1002:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:901:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/Users/simon/.nvm/versions/node/v12.16.1/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/StaticSiteStack/SiteBucket/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SiteBucket397A1860",
+            "trace": [
+              "new Bucket (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/aws-s3/lib/bucket.ts:1014:22)",
+              "new StaticSiteStack (/Users/simon/Code/ClearCoding/cc-blog/pipeline/lib/static-site-stack.ts:20:24)",
+              "Object.<anonymous> (/Users/simon/Code/ClearCoding/cc-blog/pipeline/bin/pipeline.ts:28:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1158:30)",
+              "Module.m._compile (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/ts-node/src/index.ts:836:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1178:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/ts-node/src/index.ts:839:12)",
+              "Module.load (internal/modules/cjs/loader.js:1002:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:901:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/ts-node/src/bin.ts:226:14)",
+              "Object.<anonymous> (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/ts-node/src/bin.ts:485:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1158:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1178:10)",
+              "Module.load (internal/modules/cjs/loader.js:1002:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:901:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/Users/simon/.nvm/versions/node/v12.16.1/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/StaticSiteStack/SiteBucket/Policy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SiteBucketPolicy3AC1D0F8",
+            "trace": [
+              "new BucketPolicy (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/aws-s3/lib/bucket-policy.ts:32:5)",
+              "Bucket.addToResourcePolicy (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/aws-s3/lib/bucket.ts:413:21)",
+              "Function.addToPrincipalOrResource (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/aws-iam/lib/grant.ts:130:22)",
+              "Bucket.grantPublicAccess (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/aws-s3/lib/bucket.ts:564:22)",
+              "new Bucket (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/aws-s3/lib/bucket.ts:1066:12)",
+              "new StaticSiteStack (/Users/simon/Code/ClearCoding/cc-blog/pipeline/lib/static-site-stack.ts:20:24)",
+              "Object.<anonymous> (/Users/simon/Code/ClearCoding/cc-blog/pipeline/bin/pipeline.ts:28:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1158:30)",
+              "Module.m._compile (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/ts-node/src/index.ts:836:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1178:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/ts-node/src/index.ts:839:12)",
+              "Module.load (internal/modules/cjs/loader.js:1002:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:901:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/ts-node/src/bin.ts:226:14)",
+              "Object.<anonymous> (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/ts-node/src/bin.ts:485:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1158:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1178:10)",
+              "Module.load (internal/modules/cjs/loader.js:1002:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:901:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/Users/simon/.nvm/versions/node/v12.16.1/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/StaticSiteStack/SiteCertificate/CertificateRequestorFunction/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SiteCertificateCertificateRequestorFunctionServiceRole645E891D",
+            "trace": [
+              "new Role (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/aws-iam/lib/role.ts:312:18)",
+              "new Function (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/aws-lambda/lib/function.ts:478:31)",
+              "new DnsValidatedCertificate (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/aws-certificatemanager/lib/dns-validated-certificate.ts:75:31)",
+              "new StaticSiteStack (/Users/simon/Code/ClearCoding/cc-blog/pipeline/lib/static-site-stack.ts:32:28)",
+              "Object.<anonymous> (/Users/simon/Code/ClearCoding/cc-blog/pipeline/bin/pipeline.ts:28:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1158:30)",
+              "Module.m._compile (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/ts-node/src/index.ts:836:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1178:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/ts-node/src/index.ts:839:12)",
+              "Module.load (internal/modules/cjs/loader.js:1002:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:901:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/ts-node/src/bin.ts:226:14)",
+              "Object.<anonymous> (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/ts-node/src/bin.ts:485:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1158:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1178:10)",
+              "Module.load (internal/modules/cjs/loader.js:1002:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:901:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/Users/simon/.nvm/versions/node/v12.16.1/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/StaticSiteStack/SiteCertificate/CertificateRequestorFunction/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SiteCertificateCertificateRequestorFunctionServiceRoleDefaultPolicy96ED5C9C",
+            "trace": [
+              "new Policy (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/aws-iam/lib/policy.ts:114:22)",
+              "Role.addToPolicy (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/aws-iam/lib/role.ts:353:28)",
+              "Function.addToRolePolicy (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/aws-lambda/lib/function-base.ts:230:15)",
+              "new DnsValidatedCertificate (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/aws-certificatemanager/lib/dns-validated-certificate.ts:82:23)",
+              "new StaticSiteStack (/Users/simon/Code/ClearCoding/cc-blog/pipeline/lib/static-site-stack.ts:32:28)",
+              "Object.<anonymous> (/Users/simon/Code/ClearCoding/cc-blog/pipeline/bin/pipeline.ts:28:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1158:30)",
+              "Module.m._compile (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/ts-node/src/index.ts:836:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1178:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/ts-node/src/index.ts:839:12)",
+              "Module.load (internal/modules/cjs/loader.js:1002:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:901:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/ts-node/src/bin.ts:226:14)",
+              "Object.<anonymous> (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/ts-node/src/bin.ts:485:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1158:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1178:10)",
+              "Module.load (internal/modules/cjs/loader.js:1002:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:901:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/Users/simon/.nvm/versions/node/v12.16.1/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/StaticSiteStack/SiteCertificate/CertificateRequestorFunction/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SiteCertificateCertificateRequestorFunction7CFA7DEA",
+            "trace": [
+              "new Function (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/aws-lambda/lib/function.ts:493:35)",
+              "new DnsValidatedCertificate (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/aws-certificatemanager/lib/dns-validated-certificate.ts:75:31)",
+              "new StaticSiteStack (/Users/simon/Code/ClearCoding/cc-blog/pipeline/lib/static-site-stack.ts:32:28)",
+              "Object.<anonymous> (/Users/simon/Code/ClearCoding/cc-blog/pipeline/bin/pipeline.ts:28:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1158:30)",
+              "Module.m._compile (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/ts-node/src/index.ts:836:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1178:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/ts-node/src/index.ts:839:12)",
+              "Module.load (internal/modules/cjs/loader.js:1002:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:901:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/ts-node/src/bin.ts:226:14)",
+              "Object.<anonymous> (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/ts-node/src/bin.ts:485:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1158:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1178:10)",
+              "Module.load (internal/modules/cjs/loader.js:1002:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:901:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/Users/simon/.nvm/versions/node/v12.16.1/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/StaticSiteStack/SiteCertificate/CertificateRequestorResource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SiteCertificateCertificateRequestorResource6021082A",
+            "trace": [
+              "new CustomResource (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/aws-cloudformation/lib/custom-resource.ts:163:21)",
+              "new DnsValidatedCertificate (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/aws-certificatemanager/lib/dns-validated-certificate.ts:95:25)",
+              "new StaticSiteStack (/Users/simon/Code/ClearCoding/cc-blog/pipeline/lib/static-site-stack.ts:32:28)",
+              "Object.<anonymous> (/Users/simon/Code/ClearCoding/cc-blog/pipeline/bin/pipeline.ts:28:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1158:30)",
+              "Module.m._compile (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/ts-node/src/index.ts:836:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1178:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/ts-node/src/index.ts:839:12)",
+              "Module.load (internal/modules/cjs/loader.js:1002:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:901:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/ts-node/src/bin.ts:226:14)",
+              "Object.<anonymous> (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/ts-node/src/bin.ts:485:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1158:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1178:10)",
+              "Module.load (internal/modules/cjs/loader.js:1002:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:901:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/Users/simon/.nvm/versions/node/v12.16.1/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/StaticSiteStack/AssetParameters/19e461d2ff1a5b90438fed6ceee4c197d7efee8712a6f76d85b501ab20bfb1a2/S3Bucket": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameters19e461d2ff1a5b90438fed6ceee4c197d7efee8712a6f76d85b501ab20bfb1a2S3BucketFCCD3A76",
+            "trace": [
+              "new FileAssetParameters (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/core/lib/private/asset-parameters.ts:16:32)",
+              "StaticSiteStack.addFileAsset (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/core/lib/stack.ts:540:16)",
+              "new Asset (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:113:28)",
+              "AssetCode.bind (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/aws-lambda/lib/code.ts:179:20)",
+              "new Function (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/aws-lambda/lib/function.ts:488:29)",
+              "new DnsValidatedCertificate (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/aws-certificatemanager/lib/dns-validated-certificate.ts:75:31)",
+              "new StaticSiteStack (/Users/simon/Code/ClearCoding/cc-blog/pipeline/lib/static-site-stack.ts:32:28)",
+              "Object.<anonymous> (/Users/simon/Code/ClearCoding/cc-blog/pipeline/bin/pipeline.ts:28:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1158:30)",
+              "Module.m._compile (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/ts-node/src/index.ts:836:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1178:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/ts-node/src/index.ts:839:12)",
+              "Module.load (internal/modules/cjs/loader.js:1002:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:901:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/ts-node/src/bin.ts:226:14)",
+              "Object.<anonymous> (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/ts-node/src/bin.ts:485:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1158:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1178:10)",
+              "Module.load (internal/modules/cjs/loader.js:1002:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:901:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/Users/simon/.nvm/versions/node/v12.16.1/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/StaticSiteStack/AssetParameters/19e461d2ff1a5b90438fed6ceee4c197d7efee8712a6f76d85b501ab20bfb1a2/S3VersionKey": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameters19e461d2ff1a5b90438fed6ceee4c197d7efee8712a6f76d85b501ab20bfb1a2S3VersionKey07AF06B6",
+            "trace": [
+              "new FileAssetParameters (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/core/lib/private/asset-parameters.ts:21:31)",
+              "StaticSiteStack.addFileAsset (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/core/lib/stack.ts:540:16)",
+              "new Asset (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:113:28)",
+              "AssetCode.bind (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/aws-lambda/lib/code.ts:179:20)",
+              "new Function (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/aws-lambda/lib/function.ts:488:29)",
+              "new DnsValidatedCertificate (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/aws-certificatemanager/lib/dns-validated-certificate.ts:75:31)",
+              "new StaticSiteStack (/Users/simon/Code/ClearCoding/cc-blog/pipeline/lib/static-site-stack.ts:32:28)",
+              "Object.<anonymous> (/Users/simon/Code/ClearCoding/cc-blog/pipeline/bin/pipeline.ts:28:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1158:30)",
+              "Module.m._compile (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/ts-node/src/index.ts:836:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1178:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/ts-node/src/index.ts:839:12)",
+              "Module.load (internal/modules/cjs/loader.js:1002:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:901:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/ts-node/src/bin.ts:226:14)",
+              "Object.<anonymous> (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/ts-node/src/bin.ts:485:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1158:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1178:10)",
+              "Module.load (internal/modules/cjs/loader.js:1002:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:901:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/Users/simon/.nvm/versions/node/v12.16.1/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/StaticSiteStack/AssetParameters/19e461d2ff1a5b90438fed6ceee4c197d7efee8712a6f76d85b501ab20bfb1a2/ArtifactHash": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameters19e461d2ff1a5b90438fed6ceee4c197d7efee8712a6f76d85b501ab20bfb1a2ArtifactHash652C125C",
+            "trace": [
+              "new FileAssetParameters (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/core/lib/private/asset-parameters.ts:26:36)",
+              "StaticSiteStack.addFileAsset (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/core/lib/stack.ts:540:16)",
+              "new Asset (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:113:28)",
+              "AssetCode.bind (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/aws-lambda/lib/code.ts:179:20)",
+              "new Function (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/aws-lambda/lib/function.ts:488:29)",
+              "new DnsValidatedCertificate (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/aws-certificatemanager/lib/dns-validated-certificate.ts:75:31)",
+              "new StaticSiteStack (/Users/simon/Code/ClearCoding/cc-blog/pipeline/lib/static-site-stack.ts:32:28)",
+              "Object.<anonymous> (/Users/simon/Code/ClearCoding/cc-blog/pipeline/bin/pipeline.ts:28:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1158:30)",
+              "Module.m._compile (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/ts-node/src/index.ts:836:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1178:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/ts-node/src/index.ts:839:12)",
+              "Module.load (internal/modules/cjs/loader.js:1002:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:901:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/ts-node/src/bin.ts:226:14)",
+              "Object.<anonymous> (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/ts-node/src/bin.ts:485:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1158:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1178:10)",
+              "Module.load (internal/modules/cjs/loader.js:1002:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:901:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/Users/simon/.nvm/versions/node/v12.16.1/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/StaticSiteStack/SiteDistribution/CFDistribution": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SiteDistributionCFDistribution209CF7F5",
+            "trace": [
+              "new CloudFrontWebDistribution (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/aws-cloudfront/lib/web_distribution.ts:821:26)",
+              "new StaticSiteStack (/Users/simon/Code/ClearCoding/cc-blog/pipeline/lib/static-site-stack.ts:37:26)",
+              "Object.<anonymous> (/Users/simon/Code/ClearCoding/cc-blog/pipeline/bin/pipeline.ts:28:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1158:30)",
+              "Module.m._compile (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/ts-node/src/index.ts:836:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1178:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/ts-node/src/index.ts:839:12)",
+              "Module.load (internal/modules/cjs/loader.js:1002:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:901:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/ts-node/src/bin.ts:226:14)",
+              "Object.<anonymous> (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/ts-node/src/bin.ts:485:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1158:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1178:10)",
+              "Module.load (internal/modules/cjs/loader.js:1002:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:901:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/Users/simon/.nvm/versions/node/v12.16.1/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/StaticSiteStack/SiteAliasRecord/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SiteAliasRecord3C0AF5BF",
+            "trace": [
+              "new RecordSet (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/aws-route53/lib/record-set.ts:208:23)",
+              "new ARecord (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/aws-route53/lib/record-set.ts:247:5)",
+              "new StaticSiteStack (/Users/simon/Code/ClearCoding/cc-blog/pipeline/lib/static-site-stack.ts:53:5)",
+              "Object.<anonymous> (/Users/simon/Code/ClearCoding/cc-blog/pipeline/bin/pipeline.ts:28:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1158:30)",
+              "Module.m._compile (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/ts-node/src/index.ts:836:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1178:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/ts-node/src/index.ts:839:12)",
+              "Module.load (internal/modules/cjs/loader.js:1002:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:901:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/ts-node/src/bin.ts:226:14)",
+              "Object.<anonymous> (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/ts-node/src/bin.ts:485:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1158:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1178:10)",
+              "Module.load (internal/modules/cjs/loader.js:1002:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:901:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/Users/simon/.nvm/versions/node/v12.16.1/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ]
+      }
+    },
+    "PipelineStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://725714232753/eu-west-1",
+      "properties": {
+        "templateFile": "PipelineStack.template.json"
+      },
+      "metadata": {
+        "/PipelineStack/StaticSiteBuild/Role/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "StaticSiteBuildRole9B4A3135",
+            "trace": [
+              "new Role (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/aws-iam/lib/role.ts:312:18)",
+              "new Project (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/aws-codebuild/lib/project.ts:678:31)",
+              "new PipelineProject (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/aws-codebuild/lib/pipeline-project.ts:15:5)",
+              "new PipelineStack (/Users/simon/Code/ClearCoding/cc-blog/pipeline/lib/pipeline-stack.ts:38:29)",
+              "Object.<anonymous> (/Users/simon/Code/ClearCoding/cc-blog/pipeline/bin/pipeline.ts:29:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1158:30)",
+              "Module.m._compile (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/ts-node/src/index.ts:836:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1178:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/ts-node/src/index.ts:839:12)",
+              "Module.load (internal/modules/cjs/loader.js:1002:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:901:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/ts-node/src/bin.ts:226:14)",
+              "Object.<anonymous> (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/ts-node/src/bin.ts:485:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1158:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1178:10)",
+              "Module.load (internal/modules/cjs/loader.js:1002:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:901:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/Users/simon/.nvm/versions/node/v12.16.1/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/PipelineStack/StaticSiteBuild/Role/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "StaticSiteBuildRoleDefaultPolicy11639C40",
+            "trace": [
+              "new Policy (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/aws-iam/lib/policy.ts:114:22)",
+              "Role.addToPolicy (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/aws-iam/lib/role.ts:353:28)",
+              "PipelineProject.addToRolePolicy (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/aws-codebuild/lib/project.ts:199:17)",
+              "new Project (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/aws-codebuild/lib/project.ts:764:10)",
+              "new PipelineProject (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/aws-codebuild/lib/pipeline-project.ts:15:5)",
+              "new PipelineStack (/Users/simon/Code/ClearCoding/cc-blog/pipeline/lib/pipeline-stack.ts:38:29)",
+              "Object.<anonymous> (/Users/simon/Code/ClearCoding/cc-blog/pipeline/bin/pipeline.ts:29:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1158:30)",
+              "Module.m._compile (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/ts-node/src/index.ts:836:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1178:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/ts-node/src/index.ts:839:12)",
+              "Module.load (internal/modules/cjs/loader.js:1002:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:901:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/ts-node/src/bin.ts:226:14)",
+              "Object.<anonymous> (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/ts-node/src/bin.ts:485:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1158:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1178:10)",
+              "Module.load (internal/modules/cjs/loader.js:1002:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:901:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/Users/simon/.nvm/versions/node/v12.16.1/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/PipelineStack/StaticSiteBuild/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "StaticSiteBuildFB3A1945",
+            "trace": [
+              "new Project (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/aws-codebuild/lib/project.ts:731:22)",
+              "new PipelineProject (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/aws-codebuild/lib/pipeline-project.ts:15:5)",
+              "new PipelineStack (/Users/simon/Code/ClearCoding/cc-blog/pipeline/lib/pipeline-stack.ts:38:29)",
+              "Object.<anonymous> (/Users/simon/Code/ClearCoding/cc-blog/pipeline/bin/pipeline.ts:29:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1158:30)",
+              "Module.m._compile (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/ts-node/src/index.ts:836:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1178:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/ts-node/src/index.ts:839:12)",
+              "Module.load (internal/modules/cjs/loader.js:1002:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:901:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/ts-node/src/bin.ts:226:14)",
+              "Object.<anonymous> (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/ts-node/src/bin.ts:485:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1158:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1178:10)",
+              "Module.load (internal/modules/cjs/loader.js:1002:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:901:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/Users/simon/.nvm/versions/node/v12.16.1/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/PipelineStack/CdkBuild/Role/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CdkBuildRoleBE66F777",
+            "trace": [
+              "new Role (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/aws-iam/lib/role.ts:312:18)",
+              "new Project (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/aws-codebuild/lib/project.ts:678:31)",
+              "new PipelineProject (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/aws-codebuild/lib/pipeline-project.ts:15:5)",
+              "new PipelineStack (/Users/simon/Code/ClearCoding/cc-blog/pipeline/lib/pipeline-stack.ts:62:22)",
+              "Object.<anonymous> (/Users/simon/Code/ClearCoding/cc-blog/pipeline/bin/pipeline.ts:29:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1158:30)",
+              "Module.m._compile (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/ts-node/src/index.ts:836:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1178:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/ts-node/src/index.ts:839:12)",
+              "Module.load (internal/modules/cjs/loader.js:1002:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:901:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/ts-node/src/bin.ts:226:14)",
+              "Object.<anonymous> (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/ts-node/src/bin.ts:485:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1158:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1178:10)",
+              "Module.load (internal/modules/cjs/loader.js:1002:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:901:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/Users/simon/.nvm/versions/node/v12.16.1/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/PipelineStack/CdkBuild/Role/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CdkBuildRoleDefaultPolicyD27F0F5C",
+            "trace": [
+              "new Policy (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/aws-iam/lib/policy.ts:114:22)",
+              "Role.addToPolicy (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/aws-iam/lib/role.ts:353:28)",
+              "PipelineProject.addToRolePolicy (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/aws-codebuild/lib/project.ts:199:17)",
+              "new Project (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/aws-codebuild/lib/project.ts:764:10)",
+              "new PipelineProject (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/aws-codebuild/lib/pipeline-project.ts:15:5)",
+              "new PipelineStack (/Users/simon/Code/ClearCoding/cc-blog/pipeline/lib/pipeline-stack.ts:62:22)",
+              "Object.<anonymous> (/Users/simon/Code/ClearCoding/cc-blog/pipeline/bin/pipeline.ts:29:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1158:30)",
+              "Module.m._compile (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/ts-node/src/index.ts:836:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1178:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/ts-node/src/index.ts:839:12)",
+              "Module.load (internal/modules/cjs/loader.js:1002:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:901:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/ts-node/src/bin.ts:226:14)",
+              "Object.<anonymous> (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/ts-node/src/bin.ts:485:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1158:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1178:10)",
+              "Module.load (internal/modules/cjs/loader.js:1002:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:901:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/Users/simon/.nvm/versions/node/v12.16.1/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/PipelineStack/CdkBuild/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CdkBuild455F642E",
+            "trace": [
+              "new Project (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/aws-codebuild/lib/project.ts:731:22)",
+              "new PipelineProject (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/aws-codebuild/lib/pipeline-project.ts:15:5)",
+              "new PipelineStack (/Users/simon/Code/ClearCoding/cc-blog/pipeline/lib/pipeline-stack.ts:62:22)",
+              "Object.<anonymous> (/Users/simon/Code/ClearCoding/cc-blog/pipeline/bin/pipeline.ts:29:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1158:30)",
+              "Module.m._compile (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/ts-node/src/index.ts:836:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1178:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/ts-node/src/index.ts:839:12)",
+              "Module.load (internal/modules/cjs/loader.js:1002:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:901:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/ts-node/src/bin.ts:226:14)",
+              "Object.<anonymous> (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/ts-node/src/bin.ts:485:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1158:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1178:10)",
+              "Module.load (internal/modules/cjs/loader.js:1002:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:901:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/Users/simon/.nvm/versions/node/v12.16.1/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/PipelineStack/Pipeline/ArtifactsBucketEncryptionKey/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineArtifactsBucketEncryptionKey01D58D69",
+            "trace": [
+              "new Key (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/aws-kms/lib/key.ts:353:22)",
+              "new Pipeline (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.ts:226:29)",
+              "new PipelineStack (/Users/simon/Code/ClearCoding/cc-blog/pipeline/lib/pipeline-stack.ts:91:23)",
+              "Object.<anonymous> (/Users/simon/Code/ClearCoding/cc-blog/pipeline/bin/pipeline.ts:29:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1158:30)",
+              "Module.m._compile (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/ts-node/src/index.ts:836:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1178:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/ts-node/src/index.ts:839:12)",
+              "Module.load (internal/modules/cjs/loader.js:1002:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:901:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/ts-node/src/bin.ts:226:14)",
+              "Object.<anonymous> (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/ts-node/src/bin.ts:485:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1158:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1178:10)",
+              "Module.load (internal/modules/cjs/loader.js:1002:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:901:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/Users/simon/.nvm/versions/node/v12.16.1/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/PipelineStack/Pipeline/ArtifactsBucket/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineArtifactsBucket22248F97",
+            "trace": [
+              "new Bucket (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/aws-s3/lib/bucket.ts:1014:22)",
+              "new Pipeline (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.ts:231:21)",
+              "new PipelineStack (/Users/simon/Code/ClearCoding/cc-blog/pipeline/lib/pipeline-stack.ts:91:23)",
+              "Object.<anonymous> (/Users/simon/Code/ClearCoding/cc-blog/pipeline/bin/pipeline.ts:29:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1158:30)",
+              "Module.m._compile (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/ts-node/src/index.ts:836:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1178:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/ts-node/src/index.ts:839:12)",
+              "Module.load (internal/modules/cjs/loader.js:1002:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:901:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/ts-node/src/bin.ts:226:14)",
+              "Object.<anonymous> (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/ts-node/src/bin.ts:485:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1158:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1178:10)",
+              "Module.load (internal/modules/cjs/loader.js:1002:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:901:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/Users/simon/.nvm/versions/node/v12.16.1/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/PipelineStack/Pipeline/ArtifactsBucketEncryptionKeyAlias/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineArtifactsBucketEncryptionKeyAlias5C510EEE",
+            "trace": [
+              "new Alias (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/aws-kms/lib/alias.ts:153:22)",
+              "new Pipeline (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.ts:239:7)",
+              "new PipelineStack (/Users/simon/Code/ClearCoding/cc-blog/pipeline/lib/pipeline-stack.ts:91:23)",
+              "Object.<anonymous> (/Users/simon/Code/ClearCoding/cc-blog/pipeline/bin/pipeline.ts:29:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1158:30)",
+              "Module.m._compile (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/ts-node/src/index.ts:836:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1178:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/ts-node/src/index.ts:839:12)",
+              "Module.load (internal/modules/cjs/loader.js:1002:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:901:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/ts-node/src/bin.ts:226:14)",
+              "Object.<anonymous> (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/ts-node/src/bin.ts:485:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1158:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1178:10)",
+              "Module.load (internal/modules/cjs/loader.js:1002:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:901:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/Users/simon/.nvm/versions/node/v12.16.1/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/PipelineStack/Pipeline/Role/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineRoleD68726F7",
+            "trace": [
+              "new Role (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/aws-iam/lib/role.ts:312:18)",
+              "new Pipeline (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.ts:248:31)",
+              "new PipelineStack (/Users/simon/Code/ClearCoding/cc-blog/pipeline/lib/pipeline-stack.ts:91:23)",
+              "Object.<anonymous> (/Users/simon/Code/ClearCoding/cc-blog/pipeline/bin/pipeline.ts:29:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1158:30)",
+              "Module.m._compile (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/ts-node/src/index.ts:836:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1178:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/ts-node/src/index.ts:839:12)",
+              "Module.load (internal/modules/cjs/loader.js:1002:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:901:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/ts-node/src/bin.ts:226:14)",
+              "Object.<anonymous> (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/ts-node/src/bin.ts:485:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1158:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1178:10)",
+              "Module.load (internal/modules/cjs/loader.js:1002:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:901:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/Users/simon/.nvm/versions/node/v12.16.1/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/PipelineStack/Pipeline/Role/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineRoleDefaultPolicyC7A05455",
+            "trace": [
+              "new Policy (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/aws-iam/lib/policy.ts:114:22)",
+              "Role.addToPolicy (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/aws-iam/lib/role.ts:353:28)",
+              "Function.addToPrincipal (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/aws-iam/lib/grant.ts:147:61)",
+              "Function.addToPrincipalOrResource (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/aws-iam/lib/grant.ts:117:26)",
+              "Bucket.grant (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/aws-s3/lib/bucket.ts:591:23)",
+              "Bucket.grantReadWrite (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/aws-s3/lib/bucket.ts:528:17)",
+              "new Pipeline (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.ts:264:25)",
+              "new PipelineStack (/Users/simon/Code/ClearCoding/cc-blog/pipeline/lib/pipeline-stack.ts:91:23)",
+              "Object.<anonymous> (/Users/simon/Code/ClearCoding/cc-blog/pipeline/bin/pipeline.ts:29:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1158:30)",
+              "Module.m._compile (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/ts-node/src/index.ts:836:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1178:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/ts-node/src/index.ts:839:12)",
+              "Module.load (internal/modules/cjs/loader.js:1002:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:901:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/ts-node/src/bin.ts:226:14)",
+              "Object.<anonymous> (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/ts-node/src/bin.ts:485:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1158:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1178:10)",
+              "Module.load (internal/modules/cjs/loader.js:1002:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:901:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/Users/simon/.nvm/versions/node/v12.16.1/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/PipelineStack/Pipeline/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineC660917D",
+            "trace": [
+              "new Pipeline (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.ts:252:26)",
+              "new PipelineStack (/Users/simon/Code/ClearCoding/cc-blog/pipeline/lib/pipeline-stack.ts:91:23)",
+              "Object.<anonymous> (/Users/simon/Code/ClearCoding/cc-blog/pipeline/bin/pipeline.ts:29:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1158:30)",
+              "Module.m._compile (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/ts-node/src/index.ts:836:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1178:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/ts-node/src/index.ts:839:12)",
+              "Module.load (internal/modules/cjs/loader.js:1002:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:901:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/ts-node/src/bin.ts:226:14)",
+              "Object.<anonymous> (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/ts-node/src/bin.ts:485:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1158:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1178:10)",
+              "Module.load (internal/modules/cjs/loader.js:1002:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:901:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/Users/simon/.nvm/versions/node/v12.16.1/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/PipelineStack/Pipeline/Build/Static_Site_Build/CodePipelineActionRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineBuildStaticSiteBuildCodePipelineActionRole3950A303",
+            "trace": [
+              "new Role (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/aws-iam/lib/role.ts:312:18)",
+              "Pipeline.getRoleForAction (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.ts:519:20)",
+              "Pipeline._attachActionToPipeline (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.ts:356:29)",
+              "Stage.attachActionToPipeline (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/aws-codepipeline/lib/stage.ts:141:27)",
+              "Stage.addAction (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/aws-codepipeline/lib/stage.ts:91:29)",
+              "new Stage (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/aws-codepipeline/lib/stage.ts:38:12)",
+              "Pipeline.addStage (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.ts:299:19)",
+              "new Pipeline (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.ts:283:12)",
+              "new PipelineStack (/Users/simon/Code/ClearCoding/cc-blog/pipeline/lib/pipeline-stack.ts:91:23)",
+              "Object.<anonymous> (/Users/simon/Code/ClearCoding/cc-blog/pipeline/bin/pipeline.ts:29:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1158:30)",
+              "Module.m._compile (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/ts-node/src/index.ts:836:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1178:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/ts-node/src/index.ts:839:12)",
+              "Module.load (internal/modules/cjs/loader.js:1002:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:901:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/ts-node/src/bin.ts:226:14)",
+              "Object.<anonymous> (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/ts-node/src/bin.ts:485:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1158:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1178:10)",
+              "Module.load (internal/modules/cjs/loader.js:1002:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:901:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/Users/simon/.nvm/versions/node/v12.16.1/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/PipelineStack/Pipeline/Build/Static_Site_Build/CodePipelineActionRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineBuildStaticSiteBuildCodePipelineActionRoleDefaultPolicy0447647A",
+            "trace": [
+              "new Policy (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/aws-iam/lib/policy.ts:114:22)",
+              "Role.addToPolicy (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/aws-iam/lib/role.ts:353:28)",
+              "CodeBuildAction.bound (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/aws-codepipeline-actions/lib/codebuild/build-action.ts:123:18)",
+              "CodeBuildAction.bind (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/aws-codepipeline-actions/lib/action.ts:57:17)",
+              "Pipeline._attachActionToPipeline (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.ts:362:33)",
+              "Stage.attachActionToPipeline (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/aws-codepipeline/lib/stage.ts:141:27)",
+              "Stage.addAction (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/aws-codepipeline/lib/stage.ts:91:29)",
+              "new Stage (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/aws-codepipeline/lib/stage.ts:38:12)",
+              "Pipeline.addStage (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.ts:299:19)",
+              "new Pipeline (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.ts:283:12)",
+              "new PipelineStack (/Users/simon/Code/ClearCoding/cc-blog/pipeline/lib/pipeline-stack.ts:91:23)",
+              "Object.<anonymous> (/Users/simon/Code/ClearCoding/cc-blog/pipeline/bin/pipeline.ts:29:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1158:30)",
+              "Module.m._compile (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/ts-node/src/index.ts:836:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1178:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/ts-node/src/index.ts:839:12)",
+              "Module.load (internal/modules/cjs/loader.js:1002:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:901:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/ts-node/src/bin.ts:226:14)",
+              "Object.<anonymous> (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/ts-node/src/bin.ts:485:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1158:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1178:10)",
+              "Module.load (internal/modules/cjs/loader.js:1002:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:901:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/Users/simon/.nvm/versions/node/v12.16.1/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/PipelineStack/Pipeline/Build/CDK_Build/CodePipelineActionRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineBuildCDKBuildCodePipelineActionRole15F4B424",
+            "trace": [
+              "new Role (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/aws-iam/lib/role.ts:312:18)",
+              "Pipeline.getRoleForAction (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.ts:519:20)",
+              "Pipeline._attachActionToPipeline (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.ts:356:29)",
+              "Stage.attachActionToPipeline (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/aws-codepipeline/lib/stage.ts:141:27)",
+              "Stage.addAction (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/aws-codepipeline/lib/stage.ts:91:29)",
+              "new Stage (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/aws-codepipeline/lib/stage.ts:38:12)",
+              "Pipeline.addStage (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.ts:299:19)",
+              "new Pipeline (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.ts:283:12)",
+              "new PipelineStack (/Users/simon/Code/ClearCoding/cc-blog/pipeline/lib/pipeline-stack.ts:91:23)",
+              "Object.<anonymous> (/Users/simon/Code/ClearCoding/cc-blog/pipeline/bin/pipeline.ts:29:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1158:30)",
+              "Module.m._compile (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/ts-node/src/index.ts:836:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1178:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/ts-node/src/index.ts:839:12)",
+              "Module.load (internal/modules/cjs/loader.js:1002:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:901:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/ts-node/src/bin.ts:226:14)",
+              "Object.<anonymous> (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/ts-node/src/bin.ts:485:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1158:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1178:10)",
+              "Module.load (internal/modules/cjs/loader.js:1002:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:901:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/Users/simon/.nvm/versions/node/v12.16.1/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/PipelineStack/Pipeline/Build/CDK_Build/CodePipelineActionRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineBuildCDKBuildCodePipelineActionRoleDefaultPolicyE350F3F9",
+            "trace": [
+              "new Policy (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/aws-iam/lib/policy.ts:114:22)",
+              "Role.addToPolicy (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/aws-iam/lib/role.ts:353:28)",
+              "CodeBuildAction.bound (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/aws-codepipeline-actions/lib/codebuild/build-action.ts:123:18)",
+              "CodeBuildAction.bind (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/aws-codepipeline-actions/lib/action.ts:57:17)",
+              "Pipeline._attachActionToPipeline (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.ts:362:33)",
+              "Stage.attachActionToPipeline (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/aws-codepipeline/lib/stage.ts:141:27)",
+              "Stage.addAction (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/aws-codepipeline/lib/stage.ts:91:29)",
+              "new Stage (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/aws-codepipeline/lib/stage.ts:38:12)",
+              "Pipeline.addStage (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.ts:299:19)",
+              "new Pipeline (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.ts:283:12)",
+              "new PipelineStack (/Users/simon/Code/ClearCoding/cc-blog/pipeline/lib/pipeline-stack.ts:91:23)",
+              "Object.<anonymous> (/Users/simon/Code/ClearCoding/cc-blog/pipeline/bin/pipeline.ts:29:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1158:30)",
+              "Module.m._compile (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/ts-node/src/index.ts:836:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1178:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/ts-node/src/index.ts:839:12)",
+              "Module.load (internal/modules/cjs/loader.js:1002:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:901:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/ts-node/src/bin.ts:226:14)",
+              "Object.<anonymous> (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/ts-node/src/bin.ts:485:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1158:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1178:10)",
+              "Module.load (internal/modules/cjs/loader.js:1002:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:901:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/Users/simon/.nvm/versions/node/v12.16.1/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/PipelineStack/Pipeline/Deploy/Static_Site_S3_Deploy/CodePipelineActionRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineDeployStaticSiteS3DeployCodePipelineActionRole12A088FF",
+            "trace": [
+              "new Role (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/aws-iam/lib/role.ts:312:18)",
+              "Pipeline.getRoleForAction (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.ts:519:20)",
+              "Pipeline._attachActionToPipeline (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.ts:356:29)",
+              "Stage.attachActionToPipeline (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/aws-codepipeline/lib/stage.ts:141:27)",
+              "Stage.addAction (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/aws-codepipeline/lib/stage.ts:91:29)",
+              "new Stage (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/aws-codepipeline/lib/stage.ts:38:12)",
+              "Pipeline.addStage (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.ts:299:19)",
+              "new Pipeline (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.ts:283:12)",
+              "new PipelineStack (/Users/simon/Code/ClearCoding/cc-blog/pipeline/lib/pipeline-stack.ts:91:23)",
+              "Object.<anonymous> (/Users/simon/Code/ClearCoding/cc-blog/pipeline/bin/pipeline.ts:29:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1158:30)",
+              "Module.m._compile (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/ts-node/src/index.ts:836:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1178:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/ts-node/src/index.ts:839:12)",
+              "Module.load (internal/modules/cjs/loader.js:1002:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:901:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/ts-node/src/bin.ts:226:14)",
+              "Object.<anonymous> (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/ts-node/src/bin.ts:485:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1158:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1178:10)",
+              "Module.load (internal/modules/cjs/loader.js:1002:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:901:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/Users/simon/.nvm/versions/node/v12.16.1/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/PipelineStack/Pipeline/Deploy/Static_Site_S3_Deploy/CodePipelineActionRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineDeployStaticSiteS3DeployCodePipelineActionRoleDefaultPolicyAFE8FE81",
+            "trace": [
+              "new Policy (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/aws-iam/lib/policy.ts:114:22)",
+              "Role.addToPolicy (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/aws-iam/lib/role.ts:353:28)",
+              "Function.addToPrincipal (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/aws-iam/lib/grant.ts:147:61)",
+              "Function.addToPrincipalOrResource (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/aws-iam/lib/grant.ts:117:26)",
+              "Import.grant (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/aws-s3/lib/bucket.ts:591:23)",
+              "Import.grantWrite (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/aws-s3/lib/bucket.ts:484:17)",
+              "S3DeployAction.bound (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/aws-codepipeline-actions/lib/s3/deploy-action.ts:112:23)",
+              "S3DeployAction.bind (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/aws-codepipeline-actions/lib/action.ts:57:17)",
+              "Pipeline._attachActionToPipeline (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.ts:362:33)",
+              "Stage.attachActionToPipeline (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/aws-codepipeline/lib/stage.ts:141:27)",
+              "Stage.addAction (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/aws-codepipeline/lib/stage.ts:91:29)",
+              "new Stage (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/aws-codepipeline/lib/stage.ts:38:12)",
+              "Pipeline.addStage (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.ts:299:19)",
+              "new Pipeline (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.ts:283:12)",
+              "new PipelineStack (/Users/simon/Code/ClearCoding/cc-blog/pipeline/lib/pipeline-stack.ts:91:23)",
+              "Object.<anonymous> (/Users/simon/Code/ClearCoding/cc-blog/pipeline/bin/pipeline.ts:29:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1158:30)",
+              "Module.m._compile (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/ts-node/src/index.ts:836:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1178:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/ts-node/src/index.ts:839:12)",
+              "Module.load (internal/modules/cjs/loader.js:1002:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:901:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/ts-node/src/bin.ts:226:14)",
+              "Object.<anonymous> (/Users/simon/Code/ClearCoding/cc-blog/pipeline/node_modules/ts-node/src/bin.ts:485:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1158:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1178:10)",
+              "Module.load (internal/modules/cjs/loader.js:1002:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:901:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/Users/simon/.nvm/versions/node/v12.16.1/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "runtime": {
+    "libraries": {
+      "@aws-cdk/core": "1.32.2",
+      "@aws-cdk/cx-api": "1.32.2",
+      "@aws-cdk/aws-codebuild": "1.32.2",
+      "@aws-cdk/aws-events": "1.32.2",
+      "@aws-cdk/aws-iam": "1.32.2",
+      "@aws-cdk/region-info": "1.32.2",
+      "@aws-cdk/aws-cloudwatch": "1.32.2",
+      "@aws-cdk/aws-ec2": "1.32.2",
+      "@aws-cdk/aws-ssm": "1.32.2",
+      "@aws-cdk/aws-logs": "1.32.2",
+      "@aws-cdk/aws-s3": "1.32.2",
+      "@aws-cdk/aws-kms": "1.32.2",
+      "@aws-cdk/aws-ecr-assets": "1.32.2",
+      "@aws-cdk/assets": "1.32.2",
+      "@aws-cdk/aws-ecr": "1.32.2",
+      "@aws-cdk/aws-codepipeline": "1.32.2",
+      "@aws-cdk/aws-codepipeline-actions": "1.32.2",
+      "@aws-cdk/aws-cloudformation": "1.32.2",
+      "@aws-cdk/aws-events-targets": "1.32.2",
+      "@aws-cdk/aws-lambda": "1.32.2",
+      "@aws-cdk/aws-sqs": "1.32.2",
+      "@aws-cdk/aws-s3-assets": "1.32.2",
+      "@aws-cdk/aws-ecs": "1.32.2",
+      "@aws-cdk/aws-applicationautoscaling": "1.32.2",
+      "@aws-cdk/aws-autoscaling-common": "1.32.2",
+      "@aws-cdk/aws-elasticloadbalancingv2": "1.32.2",
+      "@aws-cdk/aws-servicediscovery": "1.32.2",
+      "@aws-cdk/aws-autoscaling": "1.32.2",
+      "@aws-cdk/aws-autoscaling-hooktargets": "1.32.2",
+      "@aws-cdk/aws-sns": "1.32.2",
+      "@aws-cdk/aws-sns-subscriptions": "1.32.2",
+      "@aws-cdk/aws-cloudfront": "1.32.2",
+      "@aws-cdk/aws-certificatemanager": "1.32.2",
+      "@aws-cdk/aws-route53": "1.32.2",
+      "@aws-cdk/aws-route53-targets": "1.32.2",
+      "jsii-runtime": "node.js/v12.16.1"
+    }
+  }
+}

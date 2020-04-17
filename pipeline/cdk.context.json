@@ -1,0 +1,8 @@
+{
+  "@aws-cdk/core:enableStackNameDuplicates": "true",
+  "aws-cdk:enableDiffNoFail": "true",
+  "hosted-zone:account=725714232753:domainName=clearcoding.co.uk:region=eu-west-1": {
+    "Id": "/hostedzone/Z35KEDT6VDDN58",
+    "Name": "clearcoding.co.uk."
+  }
+}
