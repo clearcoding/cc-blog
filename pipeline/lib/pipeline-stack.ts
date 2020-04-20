@@ -42,17 +42,17 @@ export class PipelineStack extends Stack {
           install: {
             commands: [
               'cd web',
-              //'npm install',
+              'npm install',
             ],
           },
           build: {
-            //commands: ' NODE_ENV=production npm run build',
+            commands: ' NODE_ENV=production npm run build',
           },
         },
         artifacts: {
-          'base-directory': 'web',
+          'base-directory': 'web/public',
           files: [
-            'index.html'
+            '**/*'
           ]
         },
       }),
