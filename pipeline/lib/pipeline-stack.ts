@@ -50,6 +50,7 @@ export class PipelineStack extends Stack {
           },
         },
         artifacts: {
+          'base-directory': 'web',
           files: [
             'index.html'
           ]
