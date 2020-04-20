@@ -14,6 +14,7 @@ export class StaticSiteStack extends cdk.Stack {
   constructor(scope: cdk.Construct, id: string, props: StaticSiteStackProps) {
     super(scope, id, props);
 
+    const certArn = "arn:aws:acm:us-east-1:725714232753:certificate/63474aa5-080f-4601-bb09-72e0d5eb2d29";
     const zone = route53.HostedZone.fromLookup(this, 'Zone', { domainName: props.domainName });
     const siteDomain = `${props.siteSubDomain}.${props.domainName}`;
     // The code that defines your stack goes here
@@ -29,14 +30,11 @@ export class StaticSiteStack extends cdk.Stack {
         removalPolicy: cdk.RemovalPolicy.DESTROY, // NOT recommended for production code
     });
 
-    const certificateArn = new acm.DnsValidatedCertificate(this, 'SiteCertificate', {
-        domainName: siteDomain,
-        hostedZone: zone
-    }).certificateArn;
+    
 
     const distribution = new cloudfront.CloudFrontWebDistribution(this, 'SiteDistribution', {
         aliasConfiguration: {
-            acmCertRef: certificateArn,
+            acmCertRef: certArn,
             names: [ siteDomain ],
             sslMethod: cloudfront.SSLMethod.SNI,
             securityPolicy: cloudfront.SecurityPolicyProtocol.TLS_V1_1_2016,
