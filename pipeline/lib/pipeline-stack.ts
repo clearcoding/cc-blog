@@ -79,7 +79,7 @@ export class PipelineStack extends Stack {
         artifacts: {
           'base-directory': 'pipeline/dist',
           files: [
-            'StaticSiteStack.template.json',
+            'CCBlogStaticSiteStack.template.json',
           ],
         },
       }),
@@ -118,7 +118,7 @@ export class PipelineStack extends Stack {
           actions: [
             new codepipeline_actions.CloudFormationCreateUpdateStackAction({
               actionName: 'Static_Site_CFN_Deploy',
-              templatePath: cdkBuildOutput.atPath('StaticSiteStack.template.json'),
+              templatePath: cdkBuildOutput.atPath('CCBlogStaticSiteStack.template.json'),
               stackName: 'CCBlogDeploymentStack',
               adminPermissions: true
             }),
