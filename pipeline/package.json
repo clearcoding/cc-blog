@@ -8,7 +8,10 @@
     "build": "tsc",
     "watch": "tsc -w",
     "test": "jest",
-    "cdk": "cdk"
+    "cdk": "cdk",
+    "build-synth":"tsc && cdk synth",
+    "build-deploy": "npm run build && cdk deploy CCBlogPipelineStack --profile default"
+
   },
   "devDependencies": {
     "@aws-cdk/assert": "1.31.0",

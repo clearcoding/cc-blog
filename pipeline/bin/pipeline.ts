@@ -25,8 +25,8 @@ const props = {
         }
 }
 
-new StaticSiteStack(app,'StaticSiteStack',props)
-new PipelineStack(app, 'PipelineStack',props);
+new StaticSiteStack(app,'CCBlogStaticSiteStack',props)
+new PipelineStack(app, 'CCBlogPipelineStack',props);
 
 
 app.synth();

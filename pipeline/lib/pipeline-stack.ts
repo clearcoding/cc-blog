@@ -22,7 +22,7 @@ export class PipelineStack extends Stack {
     const staticSiteBuildOutput = new codepipeline.Artifact('StaticSiteBuildOutput');
   
 
-    const oauth = SecretValue.secretsManager('cc-blog-git-token');
+    const oauth = SecretValue.secretsManager('cc-blog-github-token');
 
     const sourceAction = new GitHubSourceAction({
       actionName: 'GitHub',
@@ -35,7 +35,7 @@ export class PipelineStack extends Stack {
     });
 
 
-    const staticSiteBuild = new codebuild.PipelineProject(this, 'StaticSiteBuild', {
+    const staticSiteBuild = new codebuild.PipelineProject(this, 'CCBlogStaticSiteBuild', {
       buildSpec: codebuild.BuildSpec.fromObject({
         version: '0.2',
         phases: {
@@ -59,7 +59,7 @@ export class PipelineStack extends Stack {
         buildImage: codebuild.LinuxBuildImage.STANDARD_3_0,
       },
     });
-    const cdkBuild = new codebuild.PipelineProject(this, 'CdkBuild', {
+    const cdkBuild = new codebuild.PipelineProject(this, 'CCBlogCdkBuild', {
       buildSpec: codebuild.BuildSpec.fromObject({
         version: '0.2',
         phases: {
@@ -88,7 +88,7 @@ export class PipelineStack extends Stack {
       },
     });
 
-    const pipeline  = new codepipeline.Pipeline(this, 'Pipeline', {
+    const pipeline  = new codepipeline.Pipeline(this, 'CCBlogPipeline', {
       stages: [
         {
           stageName: 'Source',
@@ -100,13 +100,13 @@ export class PipelineStack extends Stack {
           stageName: 'Build',
           actions: [
             new codepipeline_actions.CodeBuildAction({
-              actionName: 'Static_Site_Build',
+              actionName: 'CCBlogStatic_Site_Build',
               project: staticSiteBuild,
               input: sourceOutput,
               outputs: [staticSiteBuildOutput],
             }),
             new codepipeline_actions.CodeBuildAction({
-              actionName: 'CDK_Build',
+              actionName: 'CCBlogCDK_Build',
               project: cdkBuild,
               input: sourceOutput,
               outputs: [cdkBuildOutput],
@@ -114,10 +114,10 @@ export class PipelineStack extends Stack {
           ],
         },
         {
-          stageName: 'Deploy Infra',
+          stageName: 'Deploy-Infra',
           actions: [
             new codepipeline_actions.CloudFormationCreateUpdateStackAction({
-              actionName: 'Site_CFN_Deploy',
+              actionName: 'Static_Site_CFN_Deploy',
               templatePath: cdkBuildOutput.atPath('StaticSiteStack.template.json'),
               stackName: 'CCBlogDeploymentStack',
               adminPermissions: true
@@ -126,7 +126,7 @@ export class PipelineStack extends Stack {
         },
 
         {
-          stageName: 'Deploy Site',
+          stageName: 'Deploy-Site',
           actions: [
             new codepipeline_actions.S3DeployAction({
               actionName: 'Static_Site_S3_Deploy',
