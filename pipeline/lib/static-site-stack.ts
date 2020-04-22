@@ -4,7 +4,7 @@ import route53 = require('@aws-cdk/aws-route53');
 import s3 = require('@aws-cdk/aws-s3');
 import acm = require('@aws-cdk/aws-certificatemanager');
 import targets = require('@aws-cdk/aws-route53-targets/lib');
-import { StackProps } from '@aws-cdk/core';
+import { StackProps, Duration } from '@aws-cdk/core';
 
 export interface StaticSiteStackProps extends StackProps {
      domainName: string;
@@ -44,7 +44,10 @@ export class StaticSiteStack extends cdk.Stack {
                 s3OriginSource: {
                     s3BucketSource: siteBucket
                 },
-                behaviors : [ {isDefaultBehavior: true}],
+                behaviors : [ {
+                    isDefaultBehavior: true,
+                    minTtl: Duration.seconds(604800)
+                }],
             }
         ]
     });
