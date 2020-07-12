@@ -5,7 +5,7 @@ module.exports = {
     siteUrl: `https://www.clearcoding.co.uk`,
     description: `This is my description that will be used in the meta tags and important for search results`,
     hero: {
-      heading: `Welcome to the Clear Coding Blog.`,
+      heading: `Peace 🕊️ Love ❤️ Code 🤖`,
       maxWidth: 652,
     },
     social: [
