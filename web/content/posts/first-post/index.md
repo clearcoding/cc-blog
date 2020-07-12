@@ -1,5 +1,5 @@
 ---
-title: Simon's First Post
+title: Building a blog (Part I)
 author: Simon Robinson
 date: 2020-07-12
 hero: ./images/hero.jpg
