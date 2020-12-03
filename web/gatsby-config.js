@@ -52,11 +52,6 @@ module.exports = {
         display: `standalone`,
         icon: `src/assets/favicon.png`,
       },
-    },
-    {
-      resolve: `gatsby-plugin-netlify-cms`,
-      options: {
-      },
-    },
+    }
   ],
 };
