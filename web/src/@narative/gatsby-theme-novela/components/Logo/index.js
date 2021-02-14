@@ -8,7 +8,7 @@ import React from 'react';
 export default function Logo() {
   return (
     <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
- width="200px" height="100" viewBox="0 0 150.000000 34.000000"
+ width="300" height="100" viewBox="0 0 150 40"
  preserveAspectRatio="xMidYMid meet">
 
 <g transform="translate(0.000000,34.000000) scale(0.100000,-0.100000)"
