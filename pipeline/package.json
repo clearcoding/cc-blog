@@ -9,19 +9,18 @@
     "watch": "tsc -w",
     "test": "jest",
     "cdk": "cdk",
-    "build-synth":"tsc && cdk synth",
+    "build-synth": "tsc && cdk synth",
     "build-deploy": "npm run build && cdk deploy CCBlogPipelineStack --profile default"
-
   },
   "devDependencies": {
     "@aws-cdk/assert": "1.31.0",
     "@types/jest": "^24.0.22",
-    "@types/node": "^13.11.1",
-    "aws-cdk": "^1.32.2",
+    "@types/node": "^13.13.41",
+    "aws-cdk": "^1.89.0",
     "jest": "^24.9.0",
     "ts-jest": "^24.1.0",
-    "ts-node": "^8.1.0",
-    "typescript": "^3.8.3"
+    "ts-node": "^8.10.2",
+    "typescript": "^3.9.9"
   },
   "dependencies": {
     "@aws-cdk/aws-certificatemanager": "^1.32.2",
