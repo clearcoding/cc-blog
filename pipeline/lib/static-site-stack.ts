@@ -16,6 +16,8 @@ export class StaticSiteStack extends cdk.Stack {
 
     const zone = route53.HostedZone.fromLookup(this, 'Zone', { domainName: props.domainName });
     const siteDomain = `${props.siteSubDomain}.${props.domainName}`;
+    new cdk.CfnOutput(this, "Site", { value: "https://" + siteDomain })
+
     // The code that defines your stack goes here
     const siteBucket = new s3.Bucket(this, 'SiteBucket', {
         bucketName: siteDomain,
@@ -28,6 +30,8 @@ export class StaticSiteStack extends cdk.Stack {
         // DESTROY, cdk destroy will attempt to delete the bucket, but will error if the bucket is not empty.
         removalPolicy: cdk.RemovalPolicy.DESTROY, // NOT recommended for production code
     });
+    new cdk.CfnOutput(this, "Bucket", { value: siteBucket.bucketName })
+
 
     const certificateArn = new acm.DnsValidatedCertificate(
         this,
@@ -38,6 +42,7 @@ export class StaticSiteStack extends cdk.Stack {
           region: "us-east-1", // Cloudfront only checks this region for certificates.
         }
       ).certificateArn
+    new cdk.CfnOutput(this, "Certificate", { value: certificateArn })
 
     const distribution = new cloudfront.CloudFrontWebDistribution(this, 'SiteDistribution', {
         aliasConfiguration: {
@@ -58,6 +63,9 @@ export class StaticSiteStack extends cdk.Stack {
             }
         ]
     });
+    new cdk.CfnOutput(this, "DistributionId", {
+        value: distribution.distributionId,
+      })
     new route53.ARecord(this, 'SiteAliasRecord', {
         recordName: siteDomain,
         target: route53.RecordTarget.fromAlias(new targets.CloudFrontTarget(distribution)),
