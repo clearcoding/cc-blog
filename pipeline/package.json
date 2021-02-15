@@ -10,7 +10,7 @@
     "test": "jest",
     "cdk": "cdk",
     "build-synth": "tsc && cdk synth",
-    "build-deploy": "npm run build && cdk deploy CCBlogPipelineStack --profile default"
+    "build-deploy": "tsc && cdk deploy CCBlogPipelineStack"
   },
   "devDependencies": {
     "@aws-cdk/assert": "1.31.0",
